@@ -1,0 +1,46 @@
+---
+title: "Data Analysis Checklist"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+# packages
+library(tidyverse)
+library(readxl)
+library(kableExtra)
+
+
+# folder
+folder_input <- '1_input'
+
+
+```
+
+Source: Google DAC
+
+### 1. DA Checklist
+
+```{r checklist, echo=FALSE}
+
+# import the checklist
+checklist <- 
+  read_xlsx(file.path(folder_input, 'checklist.xlsx'))
+
+
+# show the table
+kable(checklist)
+
+
+```
+
+
+### 2. Data Validation
+- Data type
+- Data range
+- Data constraints
+- Data consistency
+- Data structure
+- Code validation
